@@ -113,3 +113,35 @@ export const GridDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
 `
+
+export const NavResponsive = styled.nav`
+
+    @media ${device.pc} {
+      background-color: #60A5FA;
+      border: 2px solid #076ff0;
+
+      width: 50%;
+      height: 3.5vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media ${device.pcXL} {
+      background-color: #EBEF95;
+      border: 2px solid #EFD595;
+    }
+
+    @media ${device.pc2XL} {
+      background-color: #CAEDFF;
+      border: 2px solid #FFC7EA;
+    }
+`
+
+export const NavElement = styled.a`
+  text-decoration: none;
+  margin: 1vw;
+  font-size: 1.5vw;
+  color: black;
+`

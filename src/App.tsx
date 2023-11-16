@@ -1,13 +1,21 @@
 
 import exampleImage from './assets/example.jpg'
-import { Section, ResponsiveImage, Title, StyledSimpleText, ButtonExtended, GridDiv } from './styled'
+import { Section, ResponsiveImage, Title, StyledSimpleText, ButtonExtended, GridDiv, NavResponsive, NavElement } from './styled'
 import Button from './components/Button'
 
 function App() {
 
   return (
     <>
+
+      <NavResponsive>
+        <NavElement href="#">Inicio</NavElement>
+        <NavElement href="#">Sobre nosotros</NavElement>
+        <NavElement href="#">Contacto</NavElement>
+      </NavResponsive>
+
      <Section>
+
         <div>
           <ResponsiveImage src={exampleImage} alt="Responsive image"/>
         </div>
