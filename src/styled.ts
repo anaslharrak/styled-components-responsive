@@ -115,13 +115,19 @@ export const GridDiv = styled.div`
 `
 
 export const NavResponsive = styled.nav`
+      padding: 1vw;
+      background-color: #f74d4d;
+      border: 2px solid #c93c3c;
+      display: absolute;
+      margin-left: auto;
 
     @media ${device.pc} {
       background-color: #60A5FA;
       border: 2px solid #076ff0;
 
-      width: 50%;
-      height: 3.5vw;
+      margin: 0;
+      width: auto;
+      height: auto;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -140,8 +146,22 @@ export const NavResponsive = styled.nav`
 `
 
 export const NavElement = styled.a`
-  text-decoration: none;
-  margin: 1vw;
-  font-size: 1.5vw;
-  color: black;
+  display: none;
+
+  @media ${device.pc} {
+    display: block;
+    text-decoration: none;
+    margin: 1vw;
+    font-size: 1.5vw;
+    color: black;
+  }  
+`
+
+export const ResponsiveIcon = styled.img`
+  height: 100%;
+  cursor: pointer;
+
+  @media ${device.pc} {
+    display: none;
+  }
 `
