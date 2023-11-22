@@ -18,7 +18,7 @@ import styled from 'styled-components'
   
  export const Section = styled.section`
     display: grid;
-    height: auto;
+    height: 75vh;
     width: 90vw;
     align-items: center;
     padding: 2vw;
@@ -50,26 +50,29 @@ import styled from 'styled-components'
   `
   
  export const ResponsiveImage = styled.img`
-    width: 100%;
-    border-radius: 0.5vw;
+    height: 35vmax;
+    width: auto;
+    max-width: 100%;
+    border-radius: 2vw;
+    object-fit: cover;
   `
   
  export const Title = styled.h1`
-    margin-bottom: 0.5vw;
-    font-size: 3vw;
+    margin: 0;
+    font-size: 4.5vmax;
     font-weight: 900;
   `
 
   export const StyledSimpleText = styled.p`
     font-weight: 100;
-    font-size:  2.50vw;
+    font-size: 2.5vmax;
   `
 
  export const ButtonStyled = styled.button<{ $primary?: boolean; }>`
   background: ${props => props.$primary ? "#3aa17b" : "white"};
   color: ${props => props.$primary ? "white" : "#3aa17b"};
 
-  font-size: 1.75vw;
+  font-size: 2vmax;
   border: 2px solid #3aa17b;
   border-radius: 3px;
 
@@ -151,7 +154,8 @@ export const NavElement = styled.a`
     display: block;
     text-decoration: none;
     margin: 1vw;
-    font-size: 1.5vw;
+    font-size: 2vmax;
+    font-weight: 900;
     color: black;
   }  
 `
