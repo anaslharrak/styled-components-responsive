@@ -19,7 +19,7 @@ import styled from 'styled-components'
  export const Section = styled.section`
     display: grid;
     height: auto;
-    width: auto;
+    width: 90vw;
     align-items: center;
     padding: 2vw;
     gap: 1vw;
