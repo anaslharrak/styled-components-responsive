@@ -21,11 +21,11 @@ import styled from 'styled-components'
     height: 75vh;
     width: 90vw;
     align-items: center;
-    padding: 2vw;
-    gap: 1vw;
+    padding: 2vmax;
+    gap: 1vmax;
     background-color: #34D399;
     text-align: center;
-    border-radius: 0.5vw;
+    border-radius: 0.5vmax;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
     @media ${device.mobilGrande} {
@@ -53,7 +53,7 @@ import styled from 'styled-components'
     height: 35vmax;
     width: auto;
     max-width: 100%;
-    border-radius: 2vw;
+    border-radius: 2vmax;
     object-fit: cover;
   `
   
@@ -117,7 +117,7 @@ export const GridDiv = styled.div`
 `
 
 export const NavResponsive = styled.nav`
-      padding: 1vw;
+      padding: 1vmax;
       background-color: #f74d4d;
       border: 2px solid #c93c3c;
       display: absolute;
@@ -153,7 +153,7 @@ export const NavElement = styled.a`
   @media ${device.pc} {
     display: block;
     text-decoration: none;
-    margin: 1vw;
+    margin: 1vmax;
     font-size: 2vmax;
     font-weight: 900;
     color: black;
