@@ -61,9 +61,8 @@ import styled from 'styled-components'
   `
 
   export const StyledSimpleText = styled.p`
-    font-size:  1.25vw;
     font-weight: 100;
-    font-size:  2.75vw;
+    font-size:  2.50vw;
   `
 
  export const ButtonStyled = styled.button<{ $primary?: boolean; }>`
