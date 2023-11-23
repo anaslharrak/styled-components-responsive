@@ -18,7 +18,7 @@ import styled from 'styled-components'
   
  export const Section = styled.section`
     display: grid;
-    height: 75vh;
+    height: auto;
     width: 90vw;
     align-items: center;
     padding: 2vmax;
