@@ -1,65 +1,50 @@
+import { StyledButton, StyledText, StyledDiv, StyledSection} from './styled';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme, coralTheme, oliveTheme } from './theme';
+import { useState } from 'react';
 
-import exampleImage from './assets/example.jpg'
-import { Section, ResponsiveImage, Title, 
-  StyledSimpleText, ButtonExtended, GridDiv, 
-  NavResponsive, NavElement, ResponsiveIcon } from './styled'
-import Button from './components/Button'
-import iconBars from './assets/iconBars.svg'
-import xMark from './assets/xmark.svg'
-import { useState } from 'react'
 
-function App() {
+const App = () => {
 
-  const [toggle, setToggle] = useState(false)
+  const [theme, setTheme] = useState(lightTheme)
+  const [direction, setDirection] = useState('ltr')
 
-  const toggleIcon = () => {
-    setToggle(!toggle)
+  const changeDirection = () => {
+   direction === 'ltr' ? setDirection('rtl') : setDirection('ltr')
   }
 
   return (
     <>
+      <ThemeProvider theme={theme}>
+      <div style={{ direction: direction }}>
 
-      <NavResponsive>
-        <NavElement href="#">Inicio</NavElement>
-        <NavElement href="#">Sobre nosotros</NavElement>
-        <NavElement href="#">Contacto</NavElement>
+       <StyledButton>1</StyledButton>
+       <StyledButton>2</StyledButton>
+       <StyledButton>3</StyledButton>
 
-        <ResponsiveIcon src={toggle ? xMark : iconBars} onClick={toggleIcon} alt="" />
-      </NavResponsive>
+        <StyledSection>
 
-      {
-        toggle 
-          ? 
-          <Section>
-            <h1>Inicio</h1>
-            <h1>Sobre nosotros</h1>
-            <h1>Contacto</h1>
-          </Section>
-        :  
-        <Section>
-          <div>
-            <ResponsiveImage src={exampleImage} alt="Responsive image"/>
-          </div>
+        <StyledText />
 
-          <div>
-            <Title>Headline</Title>
-            <GridDiv>
-              <StyledSimpleText>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Voluptatibus cum quidem odio dicta ipsam nesciunt earum numquam ex nulla facere. 
-              Laborum est qui quasi animi cum alias tempore, sint ut.</StyledSimpleText>
+        <StyledDiv>
+          <StyledButton onClick={() => setTheme(darkTheme)}>Change theme to Dark.</StyledButton>
+          <StyledButton onClick={() => setTheme(lightTheme)}>Change theme to Light.</StyledButton>
+          <StyledButton onClick={() => setTheme(coralTheme)}>Change theme to Coral.</StyledButton>
+          <StyledButton onClick={() => setTheme(oliveTheme)}>Change theme to Olive.</StyledButton>
+          <StyledButton onClick={() => changeDirection()}>Change theme to {direction === 'ltr' ? 'RTL' : 'LTR'}.</StyledButton>
+        </StyledDiv>
 
-              <Button textButton='Primary' primary={true} />
-              <Button textButton='Normal' primary={false} />
-              <ButtonExtended>Extended button</ButtonExtended>
-            </GridDiv>
-        
-          </div>
-        </Section>
-      }
-
+      </StyledSection>
           
-    </>
-  )
-}
+        </div>
+      
+      
+        
+      </ThemeProvider>
 
-export default App
+    </>
+    
+  );
+};
+
+export default App;
