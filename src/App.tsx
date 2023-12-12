@@ -13,6 +13,8 @@ const App = () => {
    direction === 'ltr' ? setDirection('rtl') : setDirection('ltr')
   }
 
+  
+
   return (
     <>
       <ThemeProvider theme={theme}>
