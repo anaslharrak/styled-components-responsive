@@ -32,6 +32,14 @@
     contrastColor: '#0A121A',
 }
 
+export const lightThemeRTL = {
+  ...lightTheme,
+  fonts: {
+    main: 'Arial, sans-serif',
+    heading: 'Impact, serif',
+    direction: 'rtl'
+  }
+}
 
 export const coralTheme = {
   ...baseTheme,
