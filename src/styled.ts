@@ -11,7 +11,6 @@ export const StyledButton = styled(BaseButton)`
   color: ${props => props.theme.textColor};
   border: 2px solid ${props => props.theme.contrastColor};
   background-color: ${props => props.theme.contrastColor};
-  order: ${(props) => props.order};
 `
 
 export const StyledText = styled(BaseText)`
